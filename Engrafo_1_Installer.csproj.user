@@ -2,10 +2,10 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="ChoicePanel.cs">
+    <Compile Update="Project files\ChoicePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="DockerOptionPanel.cs">
+    <Compile Update="Project files\DockerOptionPanel.cs">
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>

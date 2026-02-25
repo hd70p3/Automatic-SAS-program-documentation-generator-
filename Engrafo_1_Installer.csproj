@@ -23,43 +23,43 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Compile Update="MainForm.cs">
+      <Compile Update="Project files\MainForm.cs">
         <SubType>Form</SubType>
       </Compile>
-      <Compile Update="LocalInstallPanel.cs">
+      <Compile Update="Project files\LocalInstallPanel.cs">
         <SubType>UserControl</SubType>
       </Compile>
-      <Compile Update="DownloadPanel.cs">
+      <Compile Update="Project files\DownloadPanel.cs">
         <SubType>UserControl</SubType>
       </Compile>
-      <Compile Update="IisSetupPanel.cs">
+      <Compile Update="Project files\IisSetupPanel.cs">
         <SubType>UserControl</SubType>
       </Compile>
-      <Compile Update="AppSettingsPanel.cs">
+      <Compile Update="Project files\AppSettingsPanel.cs">
         <SubType>UserControl</SubType>
       </Compile>
-      <Compile Update="UserOwnerPanel.cs">
+      <Compile Update="Project files\UserOwnerPanel.cs">
         <SubType>UserControl</SubType>
       </Compile>
-      <Compile Update="LaunchAppPanel.cs">
+      <Compile Update="Project files\LaunchAppPanel.cs">
         <SubType>UserControl</SubType>
       </Compile>
-      <Compile Update="DockerStatusPanel.cs">
+      <Compile Update="Project files\DockerStatusPanel.cs">
         <SubType>UserControl</SubType>
       </Compile>
-      <Compile Update="DockerOptionPanel.cs">
+      <Compile Update="Project files\DockerOptionPanel.cs">
         <SubType>UserControl</SubType>
       </Compile>
-      <Compile Update="DockerLaunchPanel.cs">
+      <Compile Update="Project files\DockerLaunchPanel.cs">
         <SubType>UserControl</SubType>
       </Compile>
-      <Compile Update="DockerSetupExistingDB.cs">
+      <Compile Update="Project files\DockerSetupExistingDB.cs">
         <SubType>UserControl</SubType>
       </Compile>
-      <Compile Update="DockerSetupNewDB.cs">
+      <Compile Update="Project files\DockerSetupNewDB.cs">
         <SubType>UserControl</SubType>
       </Compile>
-      <Compile Update="DockerSetupLocalMSSQLPanel.cs">
+      <Compile Update="Project files\DockerSetupLocalMSSQLPanel.cs">
         <SubType>UserControl</SubType>
       </Compile>
     </ItemGroup>
@@ -75,13 +75,13 @@
 
     <ItemGroup>
       <None Remove="Icon-round-Question_mark.svg.png" />
-      <EmbeddedResource Include="Icon-round-Question_mark.svg.png" />
+      <EmbeddedResource Include="Project files\Icon-round-Question_mark.svg.png" />
       <None Remove="docker-compose.existingdb.template.yml" />
-      <EmbeddedResource Include="docker-compose.existingdb.template.yml" />
+      <EmbeddedResource Include="Project files\docker-compose.existingdb.template.yml" />
       <None Remove="docker-compose.localmssql.template.yml" />
-      <EmbeddedResource Include="docker-compose.localmssql.template.yml" />
+      <EmbeddedResource Include="Project files\docker-compose.localmssql.template.yml" />
       <None Remove="docker-compose.template.yml" />
-      <EmbeddedResource Include="docker-compose.template.yml">
+      <EmbeddedResource Include="Project files\docker-compose.template.yml">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
     </ItemGroup>
