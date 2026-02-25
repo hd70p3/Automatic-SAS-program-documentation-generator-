@@ -48,3 +48,27 @@ If you need a binary installation version, it is here: [Engrafo Installer](https
 >- Where are the bottlenecks
 
 https://www.engrafo.eu/automated-sas-data-catalog-and-lineage/
+
+## SQL Server Licensing Notice
+
+If you install Engrafo for Docker, Engrafo uses Microsoft SQL Server through an official Docker image.
+SQL Server is licensed by Microsoft
+and is **not** open source. By using this application, you acknowledge that
+you are responsible for complying with Microsoft's licensing terms for
+SQL Server.
+
+Depending on your use case, Microsoft provides different SQL Server editions:
+
+- **SQL Server Developer Edition** – Free, but only for development and testing.
+- **SQL Server Express** – Free to use, but with feature and resource limitations.
+- **SQL Server Standard/Enterprise** – Requires a paid license for production use.
+
+This project does **not** distribute SQL Server itself. The database image is
+downloaded directly from Microsoft’s container registry, and all usage is
+governed by Microsoft's End User License Agreement (EULA).
+
+For details, please refer to Microsoft's official SQL Server licensing terms.
+
+
+
+
