@@ -26,7 +26,7 @@ If you need a binary installation version, it is here: [Engrafo Installer](https
 > SAS is an incredibly flexible ETL and analytics tool, offering users
 > numerous ways to  achieve their desired results.  With Engrafo SAS
 > Analyzer, you can enhance governance and compliance by allowing users
-> to  commit their SAS programs to Engrafo.  This provides both users
+> to  commit their SAS program logs to Engrafo.  This provides both users
 > and the organization with a comprehensive  overview of data usage,
 > data lineage across different domains,  and a powerful tool for
 > searching data definitions, data dictionaries, view detailed flow diagrams of the code.
@@ -48,17 +48,3 @@ If you need a binary installation version, it is here: [Engrafo Installer](https
 >- Where are the bottlenecks
 
 https://www.engrafo.eu/automated-sas-data-catalog-and-lineage/
-
-
-
-	> To start syncing your workspace, just sign in with Google in the menu.
-
-SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
-
-|                |ASCII                          |HTML                         |
-|----------------|-------------------------------|-----------------------------|
-|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
-|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
-|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
-
-
