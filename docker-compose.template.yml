@@ -1,0 +1,48 @@
+﻿version: "3.9"
+
+services:
+  #Below is the database
+  engrafo_db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: engrafo_db
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=yourStrong(!)Password
+    ports:
+      - "${MY_HOSTPORT_DB}:1433"
+    volumes:
+      - engrafo_db_sql_data:/var/opt/mssql
+    networks:
+      - engrafonetwork
+    healthcheck:
+      test: [ "CMD-SHELL", "grep 'SQL Server is now ready for client connections' /var/opt/mssql/log/errorlog || exit 1" ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+  
+  # Below is the app
+  engrafo:
+    image: engrafo/engrafo-data-catalog:latest  
+    ports:
+      - "${MY_HOSTPORT}:8080"
+    depends_on:
+      engrafo_db:
+        condition: service_healthy
+    volumes:
+      - "${MY_DIRECTORY}:/app/wwwroot/uploads_CSVAuto"
+    networks:
+      - engrafonetwork
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: "http://0.0.0.0:8080"
+      ConnectionStrings__DefaultConnection: "${MY_CONNECTIONS_STRING}"
+
+
+
+networks:
+  engrafonetwork:
+    driver: bridge
+
+volumes:
+  engrafo_db_sql_data:
+

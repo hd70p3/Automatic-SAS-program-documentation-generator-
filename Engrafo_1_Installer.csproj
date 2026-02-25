@@ -1,0 +1,90 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWindowsForms>true</UseWindowsForms>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+    <PropertyGroup>
+        <PublishSingleFile>true</PublishSingleFile>
+        <SelfContained>true</SelfContained>
+
+        <!-- ensure native DLLs like SNI.x64.dll get extracted -->
+        <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+
+        <!-- you can still enable compression if you like -->
+        <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+
+        <!-- but you probably need to turn trimming off for SqlClient -->
+        <PublishTrimmed>false</PublishTrimmed>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Update="MainForm.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="LocalInstallPanel.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="DownloadPanel.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="IisSetupPanel.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="AppSettingsPanel.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="UserOwnerPanel.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="LaunchAppPanel.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="DockerStatusPanel.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="DockerOptionPanel.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="DockerLaunchPanel.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="DockerSetupExistingDB.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="DockerSetupNewDB.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="DockerSetupLocalMSSQLPanel.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.5" />
+        <Reference Include="Microsoft.Web.Administration">
+            <HintPath>$(Windir)\System32\inetsrv\Microsoft.Web.Administration.dll</HintPath>
+        </Reference>
+        <PackageReference Include="System.DirectoryServices.AccountManagement" Version="8.0.1" />
+      <PackageReference Include="System.ServiceProcess.ServiceController" Version="8.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Icon-round-Question_mark.svg.png" />
+      <EmbeddedResource Include="Icon-round-Question_mark.svg.png" />
+      <None Remove="docker-compose.existingdb.template.yml" />
+      <EmbeddedResource Include="docker-compose.existingdb.template.yml" />
+      <None Remove="docker-compose.localmssql.template.yml" />
+      <EmbeddedResource Include="docker-compose.localmssql.template.yml" />
+      <None Remove="docker-compose.template.yml" />
+      <EmbeddedResource Include="docker-compose.template.yml">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+    </ItemGroup>
+
+
+</Project>
