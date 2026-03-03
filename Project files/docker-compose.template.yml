@@ -3,7 +3,7 @@
 services:
   #Below is the database
   engrafo_db:
-    image: mcr.microsoft.com/mssql/server:2022-latest
+    image: mcr.microsoft.com/mssql/server:2025-latest
     container_name: engrafo_db
     environment:
       - ACCEPT_EULA=Y

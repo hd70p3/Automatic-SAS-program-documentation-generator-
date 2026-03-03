@@ -203,11 +203,11 @@ namespace Engrafo_1_Installer
             string dest = dlg.SelectedPath;
             string url;
             if (rbArm.Checked)
-                url = "https://www.engrafo.org/EngrafoVersions/Engrafo_ARM.zip";
+                url = "https://www.engrafo.eu/EngrafoVersions/Engrafo_ARM.zip";
             else if (rb32.Checked)
-                url = "https://www.engrafo.org/EngrafoVersions/Engrafo_v5.11.24_32bit.zip";
+                url = "https://www.engrafo.eu/EngrafoVersions/Engrafo_v5.11.24_32bit.zip";
             else
-                url = "https://www.engrafo.org/EngrafoVersions/Engrafo_v6.2_64.zip";
+                url = "https://www.engrafo.eu/EngrafoVersions/Engrafo_v6.2_64.zip";
 
             string zipPath = Path.Combine(dest, "engrafo_download.zip");
 

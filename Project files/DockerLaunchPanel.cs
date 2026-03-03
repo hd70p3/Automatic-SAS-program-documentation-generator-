@@ -153,8 +153,8 @@ namespace Engrafo_1_Installer
                 return card;
             };
 
-            downloadPanel.Controls.Add(makeCard(bntSasData, sasText, "https://www.engrafo.org/EngrafoVersions/Deployed SASPrograms.zip"));
-            downloadPanel.Controls.Add(makeCard(bntRegularData, regText, "https://www.engrafo.org/EngrafoVersions/WWISamples.zip"));
+            downloadPanel.Controls.Add(makeCard(bntSasData, sasText, "https://www.engrafo.eu/EngrafoVersions/Deployed SASPrograms.zip"));
+            downloadPanel.Controls.Add(makeCard(bntRegularData, regText, "https://www.engrafo.eu/EngrafoVersions/WWISamples.zip"));
             mainLayout.Controls.Add(downloadPanel, 0, 3);
 
             var scrollPanel = new Panel
@@ -192,13 +192,22 @@ namespace Engrafo_1_Installer
             // 1) Launch browser immediately
             Process.Start(new ProcessStartInfo($"http://localhost:{Port}") { UseShellExecute = true });
             lblMessage.Text = $"✔ Engrafo launched at http://localhost:{Port}\r\n" +
+                "IMPORTANT: Follow these steps to get started with Engrafo:\r\n" +
+                "1) Login to Engrafo with (user,password): admin@admin.com, EngrafoDemopw.1\r\n" +
+                "2) Get a license for Engrafo (you'll recieve a mail with license-file) \r\n" +
+                "3) Upload the license in the license section of Engrafo\r\n" +
+                "4) Optional: Download sample data to test Engrafo's features. You can use the sample data for testing or upload your own metadata\r\n\r\n" +
+
                 "Get help on how to use Engrafo here: Engrafo Guide\r\n" +
                 "Login to Engrafo with (user,password): admin@admin.com, EngrafoDemopw.1";
 
             int guideStart = lblMessage.Text.IndexOf("Engrafo Guide");
+            int licenseStart = lblMessage.Text.IndexOf("Get a license");
             lblMessage.Links.Clear();
             if (guideStart >= 0)
                 lblMessage.Links.Add(guideStart, "Engrafo Guide".Length, "https://engrafo.atlassian.net/wiki/spaces/EDV/overview?homepageId=256868611");
+            if (licenseStart >= 1)
+                lblMessage.Links.Add(licenseStart, "Get a license".Length, "https://buy.stripe.com/test_00w4gzeMbbY3abc2FXcQU04");
 
             lblMessage.LinkClicked += (s, e) =>
             {
@@ -222,12 +231,12 @@ namespace Engrafo_1_Installer
 
             bntSasData.Click += async (s, e2) =>
             {
-                await DownloadAndExtract("https://www.engrafo.org/EngrafoVersions/Deployed%20SASPrograms.zip");
+                await DownloadAndExtract("https://www.engrafo.eu/EngrafoVersions/Deployed%20SASPrograms.zip");
             };
 
             bntRegularData.Click += async (s, e2) =>
             {
-                await DownloadAndExtract("https://www.engrafo.org/EngrafoVersions/WWISamples.zip");
+                await DownloadAndExtract("https://www.engrafo.eu/EngrafoVersions/WWISamples.zip");
             };
         }
 

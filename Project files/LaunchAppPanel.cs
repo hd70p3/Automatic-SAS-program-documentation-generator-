@@ -172,8 +172,8 @@ namespace Engrafo_1_Installer
             };
 
             // add both cards
-            downloadPanel.Controls.Add(makeCard(bntSasData, sasText, "https://www.engrafo.org/EngrafoVersions/Deployed SASPrograms.zip"));
-            downloadPanel.Controls.Add(makeCard(bntRegularData, regText, "https://www.engrafo.org/EngrafoVersions/WWISamples.zip"));
+            downloadPanel.Controls.Add(makeCard(bntSasData, sasText, "https://www.engrafo.eu/EngrafoVersions/Deployed SASPrograms.zip"));
+            downloadPanel.Controls.Add(makeCard(bntRegularData, regText, "https://www.engrafo.eu/EngrafoVersions/WWISamples.zip"));
             mainLayout.Controls.Add(downloadPanel, 0, 3);
 
             // ── Add main layout + footer buttons ────────────────────
@@ -246,12 +246,12 @@ namespace Engrafo_1_Installer
 
             bntSasData.Click += async (s, e) =>
             {
-                await DownloadAndExtract("https://www.engrafo.org/EngrafoVersions/Deployed%20SASPrograms.zip");
+                await DownloadAndExtract("https://www.engrafo.eu/EngrafoVersions/Deployed%20SASPrograms.zip");
             };
 
             bntRegularData.Click += async (s, e) =>
             {
-                await DownloadAndExtract("https://www.engrafo.org/EngrafoVersions/WWISamples.zip");
+                await DownloadAndExtract("https://www.engrafo.eu/EngrafoVersions/WWISamples.zip");
             };
         }
 

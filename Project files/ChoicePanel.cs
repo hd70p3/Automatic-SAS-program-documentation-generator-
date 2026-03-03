@@ -85,14 +85,14 @@ namespace Engrafo_1_Installer
 
             lblDockerDesc = new Label
             {
-                Text = "(In development - come back later) This will install Engrafo using a Docker image\r\n" +
+                Text = "This will install Engrafo using a Docker image\r\n" +
            "You can choose a complete installation with download of a SQL Server " +
            "or use your own SQL database\r\n" +
            "Docker Desktop must be running",
                 AutoSize = true,
                 MaximumSize = new Size(650, 0),
                 Margin = new Padding(indent, 0, 0, 0),
-                Enabled = false 
+                Enabled = true
             };
             tbl.Controls.Add(lblDockerDesc, 0, 4);
 

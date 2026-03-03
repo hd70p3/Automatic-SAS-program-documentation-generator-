@@ -384,9 +384,9 @@ namespace Engrafo_1_Installer
                     if (proc.ExitCode != 0) throw new Exception(o + "\n" + e2);
                 });
 
-                MessageBox.Show(
-                    "Installation complete! Open Engrafo at http://localhost:" + textBoxAppPort.Text.Trim(),
-                    "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(
+                //    "Installation complete! Open Engrafo at http://localhost:" + textBoxAppPort.Text.Trim(),
+                //    "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DeployCompleted?.Invoke(this, EventArgs.Empty);
             }
             catch (Exception ex)
