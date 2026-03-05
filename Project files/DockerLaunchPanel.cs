@@ -56,7 +56,7 @@ namespace Engrafo_1_Installer
             {
                 Text = "All Done! \r\n\r\n Click the Launch button. \r\n Come back to the installer app for user login and demo data\r\n"+
                 "On launch - Please allow the browser a short time to connect to the containers in Docker.\r\n"+
-                "You can alså start the application directly from Docker Desktop.",
+                "You can also start the application directly from Docker Desktop.",
                 Font = new Font(this.Font, FontStyle.Bold),
                 AutoSize = true,
                 Anchor = AnchorStyles.Left,
@@ -206,9 +206,9 @@ namespace Engrafo_1_Installer
             int licenseStart = lblMessage.Text.IndexOf("Get a license");
             lblMessage.Links.Clear();
             if (guideStart >= 0)
-                lblMessage.Links.Add(guideStart-8, "Engrafo Guide".Length, "https://engrafo.atlassian.net/wiki/spaces/EDV/overview?homepageId=256868611");
+                lblMessage.Links.Add(guideStart-3, "Engrafo Guide".Length, "https://engrafo.atlassian.net/wiki/spaces/EDV/overview?homepageId=256868611");
             if (licenseStart >= 1)
-                lblMessage.Links.Add(licenseStart-6, "Get a license".Length, "https://www.engrafo.eu/sasanalyzerpricingmodels/");
+                lblMessage.Links.Add(licenseStart-3, "Get a license".Length, "https://www.engrafo.eu/sasanalyzerpricingmodels/");
 
             lblMessage.LinkClicked += (s, e) =>
             {
