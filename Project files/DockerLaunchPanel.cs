@@ -198,16 +198,15 @@ namespace Engrafo_1_Installer
                 "3) Upload the license in the license section of Engrafo\r\n" +
                 "4) Optional: Download sample data to test Engrafo's features. You can use the sample data for testing or upload your own metadata\r\n\r\n" +
 
-                "Get help on how to use Engrafo here: Engrafo Guide\r\n" +
-                "Login to Engrafo with (user,password): admin@admin.com, EngrafoDemopw.1";
+                "Get help on how to use Engrafo here: Engrafo Guide\r\n";
 
             int guideStart = lblMessage.Text.IndexOf("Engrafo Guide");
             int licenseStart = lblMessage.Text.IndexOf("Get a license");
             lblMessage.Links.Clear();
             if (guideStart >= 0)
-                lblMessage.Links.Add(guideStart, "Engrafo Guide".Length, "https://engrafo.atlassian.net/wiki/spaces/EDV/overview?homepageId=256868611");
+                lblMessage.Links.Add(guideStart, "Engrafo Guide".Length-8, "https://engrafo.atlassian.net/wiki/spaces/EDV/overview?homepageId=256868611");
             if (licenseStart >= 1)
-                lblMessage.Links.Add(licenseStart, "Get a license".Length, "https://buy.stripe.com/test_00w4gzeMbbY3abc2FXcQU04");
+                lblMessage.Links.Add(licenseStart, "Get a license".Length-6, "https://www.engrafo.eu/sasanalyzerpricingmodels/");
 
             lblMessage.LinkClicked += (s, e) =>
             {

@@ -111,6 +111,33 @@ namespace Engrafo_1_Installer
 
             tbl.Controls.Add(lblDirectory, 0, 4);
             tbl.Controls.Add(dirPanel, 1, 4);
+            
+            var lblScpHelp = new LinkLabel
+            {
+                Text = "The directory you add is where you can add your SAS scaproc logs when Engrafo is running.\r\nSee Engrafo Guide",
+                AutoSize = true
+            };
+
+            tbl.Controls.Add(lblScpHelp, 0, 5);
+            tbl.SetColumnSpan(lblScpHelp, 2);
+
+            const string guideText = "Engrafo Guide";
+            var guideStart = lblScpHelp.Text.IndexOf(guideText, StringComparison.Ordinal);
+            if (guideStart >= 0)
+            {
+                lblScpHelp.Links.Clear();
+                lblScpHelp.Links.Add(guideStart, guideText.Length-1, "https://engrafo.atlassian.net/wiki/spaces/EDV/pages/303529995/Using+Engrafo+SAS+Analyzer");
+            }
+
+            lblScpHelp.LinkClicked += (_, e) =>
+            {
+                if (e.Link?.LinkData is string url)
+                {
+                    Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+                }
+            };
+
+
 
             // Progress bar row
             progressBar = new ProgressBar

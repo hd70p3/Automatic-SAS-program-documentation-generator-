@@ -56,13 +56,14 @@ namespace Engrafo_1_Installer
                 Text   = "Windows Server/Desktop installation",
                 AutoSize = true,
                 Checked = true,
-                Margin = new Padding(indent, 0, 0, 0)
+                Margin = new Padding(indent, 0, 0, 0),
+                Enabled = false // Disabled in this installer, contact@engrafo.eu for updated installer
             };
             tbl.Controls.Add(rbLocal, 0, 0);
 
             lblLocalDesc = new Label
             {
-                Text = "This will install Engrafo on a Windows server or desktop.\r\n" +
+                Text = "(Disabled in this installer. Contact@engrafo.eu for more information.)\r\nThis will install Engrafo on a Windows server or desktop.\r\n" +
                        "Choosing this option, you will need to have access to an MS SQL database " +
                        "and a running Internet Information Server (IIS)\r\n"+
                        "If you don't have a MS SQL Server or a running IIS use the links below to download a MS SQL Server and get help on enabling IIS on windows",
@@ -77,9 +78,9 @@ namespace Engrafo_1_Installer
             {
                 Text   = "Docker installation",
                 AutoSize = true,
-                Checked = false,
+                Checked = true,
                 Margin = new Padding(indent, 0, 0, 0),
-                Enabled = true // Disabled until implemented
+                Enabled = true 
             };
             tbl.Controls.Add(rbDocker, 0, 3);
 
