@@ -1,15 +1,15 @@
-# Installer for Engrafo SAS Analyzer
+# Installer for Engrafo Data Catalog Solution
 
-**This repository holds a installation wizard for Engrafo SAS Analyzer**
+**This repository holds a installation wizard for Engrafo Data Catalog Solution**
 
-To install Engrafo SAS Analyzer we have created an installer that has two 
+To install Engrafo Data Catalog Solution we have created an installer that has two 
 installation options:
 
- 1. Run Engrafo SAS Analyzer in Docker 
+ 1. Run Engrafo Data Catalog Solution in Docker 
  2. Set up a website,  database  and  the Engrafo Analyser Application on premises
 
 Pull the project and make sure you run the project in administrator mode.
-E.g. if you are using Visual Studion, then start Visial Studio in Administrator mode
+E.g. if you are using Visual Studion, then start Visial Studio in Administrator mode.
 
 Option 1) requires that you have Docker Desktop Running. Can be run on any platform.
 
@@ -17,44 +17,46 @@ Option 2) requires a running Internet Information Server(IIS) and a MS SQL Serve
 
 If you need a binary installation version contact@engrafo.eu.
 
-***What is Engrafo SAS Analyzer***
+***What is Engrafo Data Catalog Solution...?***
 
-> Engrafo SAS analyzer module is a data catalog tool that automatically
+> Engrafo Data Catalog Solution a data catalog tool that automatically
 > creates a full data catalog, program documentation and data lineage
-> for your entire SAS landscape using both syntax parsing and GenAI
+> for your entire data landscape using both syntax parsing and GenAI
 > 
-> SAS is an incredibly flexible ETL and analytics tool, offering users
-> numerous ways to achieve their desired results. With Engrafo SAS
-> Analyzer, you can enhance governance and compliance by allowing users
-> to  commit their SAS program logs to Engrafo. This provides both users
-> and the organization with a comprehensive overview of data usage,
-> data lineage across different domains, and a powerful tool for
-> searching data definitions, data dictionaries, view detailed flow diagrams of the code.
->
-> Engrafo SAS Analyzer ensures you have the insights and control needed to optimize
-> your SAS environment.
->
-> Out of the box yout get:
->- a full data catalog application with all referenced data and documentation of your SAS programs
->- detailed flow charts of all SAS programs
->- overview over SAS procedures used
->- list of both logical and physical libnames 
->- input and output data and external files for all programs
->- all metadata stored in a SQL data model to be utilized in e.g. PowerBI, Tableau or direct SQL queries
->- data lineage visualization, impact and reverse lineage on libraries, tables and columns 
->- AI models to get deep insights in your SAS programs
->  
-> Get answers on questions like:  
->- What is the impact for changing selected libraries, tables or columns?
->- Which programs are depended on each other?
->- What procedures do we use? 
->- What are the usages freqensies?  
->- Do we have the right SAS licenses?  
->- Which programs, procedures, data steps require the most time to execute? 
->- Where are the bottlenecks in the SAS programs
->- Where does external files come from and how is the lineage for them??
+>**Features in Engrafo Data Catalog Solution:**
+>- Centralized Metadata Repository for storing documentation of databases, tables, columns, and business definitions
+>- Templates for Structured Data Documentation to standardize descriptions of datasets, tables, and fields
+>- Automated Lineage Discovery showing how data flows between sources, transformations, and outputs
+>- Impact Analysis to identify downstream systems affected by changes in data structures
+>- Reverse Impact Lineage to trace a report or dataset back to its original sources
+>- SQL Parser and Analyzer to automatically extract lineage and dependencies from SQL code (add-on module)
+>- SAS Program Analyzer for automated documentation of SAS programs, macros, and data flows (add-on module)
+>- Automated SAS Log Parsing to capture runtime metadata and execution information(add-on module)
+>- table-Level Lineage to trace transformations at the field level
+>- Business Glossary Management to maintain consistent business definitions across the organization
+>- Data Catalog Search enabling users to easily find datasets, tables, and metadata
+>- AI-Generated Documentation using generative AI to automatically create descriptions of data assets
+>- AI Content Enrichment to generate summaries, pseudocode explanations, and functional descriptions of programs
+>- AI Chat Interface ("Ask Engrafo") allowing users to query metadata and documentation using natural language
+>- Automated Metadata Extraction from databases, code repositories, and analytics tools
+>- Versioning of Documentation to track changes in metadata over time
+>- Data Governance Support with structured ownership, stewardship, and classification fields
+>- Role-Based Access Control for administrators, creators, and viewers
+>- Active Directory / Entra ID Synchronization for user authentication and group management
+>- Impact Visualization Diagrams for understanding dependencies between systems and data assets
+>- Integration with BI Tools such as Power BI and Tableau for reporting on data quality, documentation progress, etc.
+>- SQL API Access for programmatic interaction with the catalog
+>- Crontab scheduling for impoirt of metdatadata
+>- Connectionsstring to MS SQL, PostgreSQL, DB2, ORACLE, MySQL
+>- Custom Metadata Fields allowing organizations to extend the catalog schema
+>- Export and rule buiklder of Metadata to standard formats for governance frameworks (e.g., EHDS/DCAT or other metadata standards)
+>- Export rule builder to target other systems like PurView, Colibra, Alation
+>- Interactive Lineage Graphs for visual exploration of dependencies
+>- Data Asset Ownership and Stewardship Tracking
+>- Collaboration Features such as comments and shared documentation updates
+>- Scalable Web-Based Architecture built for enterprise environments
 
-https://www.engrafo.eu/automated-sas-data-catalog-and-lineage/
+https://www.engrafo.eu/
 
 ## SQL Server Licensing Notice
 
