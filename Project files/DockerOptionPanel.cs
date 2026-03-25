@@ -82,13 +82,35 @@ namespace Engrafo_1_Installer
             DisplayHelper.AdjustControlForDpi(btnBack);
 
             LayoutHelper.PlaceFooterButtons(this, btnNext, btnBack, null, margin);
-            
-// Add help icons to the options
+
+            // Add help icons to the options
             AddHelp(rbOpt1, "Use this to connect to any reachable SQL Server using SQL login credentials.");
             AddHelp(rbOpt2, "Use this to connect to an already running MSSQL Server that is running inside a Docker container.");
             AddHelp(rbOpt3, "Recommended: Let Engrafo create a fresh SQL Server database in a new Docker container for you.");
-        }
 
+            var lblSqlServerLicenseNotice = new Label
+            {
+                AutoSize = false,
+                Location = new Point(50, rbOpt3.Bottom + 15),
+                Width = Math.Max(200, this.ClientSize.Width - 80),
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
+
+                Text =
+                       "SQL Server Licensing Notice\r\n" +
+                       "SQL Server is licensed by Microsoft and is NOT open source. By using this application, you acknowledge that\r\n" +
+                       "you are responsible for complying with Microsoft's licensing terms for using MSSQL Server\r\n" +
+                       "Using a MSSQL image the installer does not distribute SQL Server itself. The database image is downloaded directly from\r\n" +
+                       "Microsoft’s container registry\n\r" +
+                       "All usage of MSSQL Server is governed by Microsoft's End User License Agreement (EULA).\r\n" +
+                       "For details, please refer to Microsoft's official SQL Server licensing terms."
+            };
+
+            // Reasonable height; will still word-wrap within the label width.
+            lblSqlServerLicenseNotice.Height = 140;
+
+            this.Controls.Add(lblSqlServerLicenseNotice);
+            lblSqlServerLicenseNotice.BringToFront();
+        }
 
         private void BtnNext_Click(object sender, EventArgs e)
         {

@@ -9,7 +9,7 @@ installation options:
  2. Set up a website,  database  and  the Engrafo Analyser Application on premises
 
 Pull the project and make sure you run the project in administrator mode.
-E.g. if you are using Visual Studion, then start Visial Studio in Administrator mode
+E.g. if you are using Visual Studio, then start Visial Studio in Administrator mode
 
 Option 1) requires that you have Docker Desktop Running. Can be run on any platform.
 

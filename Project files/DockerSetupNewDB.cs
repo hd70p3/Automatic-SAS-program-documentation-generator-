@@ -126,7 +126,7 @@ namespace Engrafo_1_Installer
             if (guideStart >= 0)
             {
                 lblScpHelp.Links.Clear();
-                lblScpHelp.Links.Add(guideStart, guideText.Length-1, "https://engrafo.atlassian.net/wiki/spaces/EDV/pages/303529995/Using+Engrafo+SAS+Analyzer");
+                lblScpHelp.Links.Add(guideStart-1, guideText.Length, "https://engrafo.atlassian.net/wiki/spaces/EDV/pages/303529995/Using+Engrafo+SAS+Analyzer");
             }
 
             lblScpHelp.LinkClicked += (_, e) =>
@@ -340,10 +340,11 @@ namespace Engrafo_1_Installer
                 //    "Installation complete! Open Engrafo at localhost:" + textBoxAppPort.Text.Trim(),
                 //    "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DeployCompleted?.Invoke(this, EventArgs.Empty);
+                
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Docker Compose failed:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Docker Compose failed:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

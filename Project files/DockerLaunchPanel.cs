@@ -54,9 +54,9 @@ namespace Engrafo_1_Installer
 
             lblTitle = new Label
             {
-                Text = "All Done! \r\n\r\n Click the Launch button. \r\n Come back to the installer app for user login and demo data\r\n"+
-                "On launch - Please allow the browser a short time to connect to the containers in Docker.\r\n"+
-                "You can also start the application directly from Docker Desktop.",
+                Text = "All Done!\r\n\r\nClick the Launch button.\r\nCome back to the installer app for user login and demo data\r\n"+
+                "IMPORTANT!!! On launch - Please allow the browser a short time to connect to the containers in Docker.\r\n"+
+                "You can also start the application directly from Docker Desktop if the browser does not connect.",
                 Font = new Font(this.Font, FontStyle.Bold),
                 AutoSize = true,
                 Anchor = AnchorStyles.Left,
@@ -122,9 +122,9 @@ namespace Engrafo_1_Installer
                     RowCount = 3,
                     Margin = new Padding(8)
                 };
-                layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-                layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-                layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+                //layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+                //layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+                //layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
 
                 layout.Controls.Add(chk, 0, 0);
 
@@ -193,6 +193,7 @@ namespace Engrafo_1_Installer
         {
             // 1) Launch browser immediately
             Process.Start(new ProcessStartInfo($"http://localhost:{Port}") { UseShellExecute = true });
+
             lblMessage.Text = $"✔ Engrafo launched at http://localhost:{Port}\r\n" +
                 "IMPORTANT: Follow these steps to get started with Engrafo:\r\n" +
                 "1) Login to Engrafo with (user,password): admin@admin.com, EngrafoDemopw.1\r\n" +
@@ -206,7 +207,7 @@ namespace Engrafo_1_Installer
             int licenseStart = lblMessage.Text.IndexOf("Get a license");
             lblMessage.Links.Clear();
             if (guideStart >= 0)
-                lblMessage.Links.Add(guideStart-3, "Engrafo Guide".Length, "https://engrafo.atlassian.net/wiki/spaces/EDV/overview?homepageId=256868611");
+                lblMessage.Links.Add(guideStart-7, "Engrafo Guide".Length, "https://engrafo.atlassian.net/wiki/spaces/EDV/overview?homepageId=256868611");
             if (licenseStart >= 1)
                 lblMessage.Links.Add(licenseStart-3, "Get a license".Length, "https://www.engrafo.eu/sasanalyzerpricingmodels/");
 
