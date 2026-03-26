@@ -15,7 +15,8 @@ Option 1) requires that you have Docker Desktop Running. Can be run on any platf
 
 Option 2) requires a running Internet Information Server(IIS) and a MS SQL Server. (If you want to use the AI models in Engrafo, you need to use a 2025 MSSQL Server) 
 
-If you need a binary installation version contact@engrafo.eu
+If you need a ready-to-run installer you can download it here: 
+https://www.engrafo.eu/EngrafoVersions/Engrafo_1_Installer_SASAnalyzer.zip
 
 ***What is Engrafo SAS Analyzer***
 
